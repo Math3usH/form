@@ -46,48 +46,69 @@ if(contador < 10){
   <div class="contador">
     <h1>contador</h1>
     <p> {{ contador }}</p>
+    <div class="botao">
     <button @click="encrementar">+</button>
     <button @click="decrementar">-</button>
     <button @click="zerar">C</button>
+  </div>
     <div
       :style="{ backgroundColor: contador > 10 ? 'green' : 'red' }">
       <p v-if="contador > 10">Valor maior que 10</p>
       <p v-else>Valor menor que 10</p>
     </div>
   </div>
+  <footer>
+   <div class="copy">&copy; Matheus Henrique, Henrique Dias; 2024</div> 
+  </footer>
 </template>
 
 <style scoped>
 .info {
-  background-color: rgba(35, 12, 22, 1);
-  padding: 60px 50px;
+  background-color: rgb(15, 57, 82);
+  padding: 5px;
   color: rgb(183, 210, 219);
   border-radius: 10px;
-  border: solid 2px  rgb(0, 0, 0);
-  
+  border: solid 1px  rgb(0, 0, 0);
 }
 
-p, button, h1{
+.botao{
+  text-align: center;
+}
+
+p{
   text-align: center;
 }
 
 h1 {
-  color: white;
+  color: rgb(0, 255, 200);
   font-weight: bold;
-  font-size: 1.5em;
-  text-align: center;
+  font-size: 2em;
+  text-align: center  ;
 }
 .contador{
-  background-color: rgba(35, 12, 22, 1);
+  background-color: rgb(15, 57, 82);
   padding: 20px 30px;
   color: rgb(183, 210, 219);
   border-radius: 10px;
-  border: solid 2px  rgb(0, 0, 0);
+  border: solid 1px  rgb(0, 0, 0);
+  margin-top: 20px;
 }
 button{
   font-size: x-large;
+  font-size: 40px;
 }
 .cor{
   background-color: brown;
 }
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 </style>
