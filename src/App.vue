@@ -1,6 +1,6 @@
 <script setup>
 const nome = 'Henrique Dias'
-const idade = 16
+const idade = 15
 
 function inverter(texto) {
   return texto.split('').reverse().join('')
@@ -50,13 +50,11 @@ if(contador < 10){
     <button @click="decrementar">-</button>
     <button @click="zerar">C</button>
     <div
-      :style="{ backgroundColor: contador > 10 ? 'green' : 'red' }"
-    >
+      :style="{ backgroundColor: contador > 10 ? 'green' : 'red' }">
       <p v-if="contador > 10">Valor maior que 10</p>
       <p v-else>Valor menor que 10</p>
     </div>
   </div>
-
 </template>
 
 <style scoped>
@@ -66,13 +64,18 @@ if(contador < 10){
   color: rgb(183, 210, 219);
   border-radius: 10px;
   border: solid 2px  rgb(0, 0, 0);
+  
+}
 
+p, button, h1{
+  text-align: center;
 }
 
 h1 {
   color: white;
   font-weight: bold;
   font-size: 1.5em;
+  text-align: center;
 }
 .contador{
   background-color: rgba(35, 12, 22, 1);
