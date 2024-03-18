@@ -1,16 +1,17 @@
 <script setup>
+
+import { ref } from 'vue'
+
 const nome = 'Henrique Dias'
 const idade = 15
 
 function inverter(texto) {
-  return texto.split('').reverse().join('')
+  return texto.split('').reverse().join('').toUpperCase()
 }
 
 function saudacao() {
   return `Olá, ${nome}!`
 }
-
-import { ref } from 'vue'
 
 const contador = ref(0)
 
@@ -38,7 +39,7 @@ if(contador < 10){
     <hr />
     <p>Para completar 50 anos faltam: {{ 50 - idade }} anos</p>
     <p>O nome tem {{ nome.length }} caracteres</p>
-    <p>O nome invertido é: {{ inverter(nome).toUpperCase() }} </p>
+    <p>O nome invertido em maiusculo  é: {{ inverter(nome) }} </p>
     <hr />
     <p> Exemplo de saudação usando função</p>
     <p> {{ saudacao() }} </p>
